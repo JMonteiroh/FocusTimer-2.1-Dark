@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --base-color: 240;
+  --bg-color: hsl(var(--base-color), 0%, 100%);
+  --svg-color: hsl(var(--base-color), 6%, 21%);
+  --bg-card: hsl(240, 9%, 89%);
+  --bg-card-hide: hsl(194, 97%, 31%);
+  --svg-color-hide: hsl(var(--base-color), 0%, 100%);
+}
+
+body {
+  display: grid;
+  font-family: 'Roboto', sans-serif;
+  color: var(--svg-color);
+  background-color: var(--bg-color);
+  min-height: 100vh;
+}
+
+main {
+  justify-self: center;
+  align-self: center;
+  display: flex;
+  gap: 19.2rem;
+}
+
+.timer {
+  display: grid;
+}
+
+.time {
+  display: flex;
+  align-items: flex-end;
+}
+
+.time span {
+  font-weight: 500;
+  font-size: 12.6rem;
+  line-height: 14.8rem;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background-color: var(--bg-color);
+}
+
+button svg path {
+  fill: var(--svg-color);
+}
+
+.buttons {
+  display: flex;
+  width: 4.8rem;
+  height: 4.8rem;
+  gap: 4rem;
+}
+
+.sounds {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3.2rem;
+}
+
+.card {
+  background-color: var(--bg-card);
+  border-radius: 2.4rem;
+  width: 13.8rem;
+  height: 15.2rem;
+}
+
+.hide {
+  background-color: var(--bg-card-hide);
+}
+
+.hide-buttons  svg path{
+  fill: var(--bg-card-hide);
+}
+
+.hide svg path {
+  fill: var(--svg-color-hide);
+}
+
+@media (max-width: 768px) {
+  main {
+    display: grid;
+    padding: 3.2rem;
+    width: auto;
+    height: auto;
+    gap: 5rem;
+  }
+
+  .timer {
+    display: grid;
+  }
+
+  .time span {
+    font-size: 10rem;
+  }
+
+  .buttons {
+    gap: 1.8rem;
+  }
+
+  .card {
+    width: 11.8rem;
+    height: 13.2rem;
+  }
+  
+  .sounds {
+    grid-gap: 1rem;
+  }
+}
