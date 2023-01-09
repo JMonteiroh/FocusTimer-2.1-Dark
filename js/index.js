@@ -13,6 +13,8 @@ import {
   buttonFireplace,
   minutesDisplay,
   secondsDisplay,
+  buttonDarkTheme,
+  buttonLightTheme,
 } from "./elements.js";
 
 const controls = Controls({
@@ -24,6 +26,8 @@ const controls = Controls({
   buttonRain,
   buttonCoffee,
   buttonFireplace,
+  buttonDarkTheme,
+  buttonLightTheme,
 })
 
 const timer = Timer({

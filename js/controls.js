@@ -7,6 +7,8 @@ export default function Controls({
   buttonRain,
   buttonCoffee,
   buttonFireplace,
+  buttonDarkTheme,
+  buttonLightTheme,
 }) {
   function play() {
     buttonPlay.classList.add('hide-buttons')
@@ -56,6 +58,11 @@ export default function Controls({
     buttonForest.classList.remove('hide')
   }
 
+  function themeChange() {
+    buttonDarkTheme.classList.toggle('hide-theme')
+    buttonLightTheme.classList.toggle('hide-theme')
+  }
+
   return {
     play,
     stop,
@@ -65,6 +72,7 @@ export default function Controls({
     rain,
     coffee,
     fireplace,
+    themeChange
   }
 
 

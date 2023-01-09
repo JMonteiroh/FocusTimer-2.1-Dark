@@ -8,6 +8,8 @@ const buttonCoffee = document.querySelector('.coffee')
 const buttonFireplace = document.querySelector('.fireplace')
 const minutesDisplay = document.querySelector('.minutes')
 const secondsDisplay = document.querySelector('.seconds')
+const buttonDarkTheme = document.querySelector('.dark')
+const buttonLightTheme = document.querySelector('.light')
 
 
 export {
@@ -21,4 +23,6 @@ export {
   buttonFireplace,
   minutesDisplay,
   secondsDisplay,
+  buttonDarkTheme,
+  buttonLightTheme,
 }

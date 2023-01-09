@@ -3,15 +3,22 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-:root {
+:root:has(.dark.hide-theme) {
   font-size: 62.5%;
-  --base-color: 240;
-  --bg-color: hsl(var(--base-color), 0%, 100%);
-  --svg-color: hsl(var(--base-color), 6%, 21%);
+  --bg-color: hsl(240, 5%, 7%);
+  --svg-color: hsl(240, 7%, 78%);
+  --bg-card: hsl(240, 6%, 17%);
+  --bg-card-hide: hsl(195, 74%, 15%);
+  --svg-color-hide: hsl(0, 0%, 100%);
+}
+
+:root:has(.light.hide-theme) {
+  font-size: 62.5%;
+  --bg-color: hsl(240, 0%, 100%);
+  --svg-color: hsl(240, 6%, 21%);
   --bg-card: hsl(240, 9%, 89%);
   --bg-card-hide: hsl(194, 97%, 31%);
-  --svg-color-hide: hsl(var(--base-color), 0%, 100%);
+  --svg-color-hide: hsl(240, 0%, 100%);
 }
 
 body {
@@ -78,12 +85,22 @@ button svg path {
   background-color: var(--bg-card-hide);
 }
 
-.hide-buttons  svg path{
+.hide-buttons svg path{
   fill: var(--bg-card-hide);
 }
 
 .hide svg path {
   fill: var(--svg-color-hide);
+}
+
+.hide-theme {
+  display: none;
+}
+
+.theme {
+  position: fixed;
+  top: 6rem;
+  right: 6rem;
 }
 
 @media (max-width: 768px) {
@@ -94,6 +111,12 @@ button svg path {
     height: auto;
     gap: 5rem;
   }
+
+  .theme {
+    top: 3.5rem;
+    right: 3.5rem;
+  }
+  
 
   .timer {
     display: grid;

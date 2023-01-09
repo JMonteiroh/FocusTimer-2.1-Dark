@@ -8,6 +8,8 @@ import {
   buttonCoffee,
   buttonFireplace,
   minutesDisplay,
+  buttonDarkTheme,
+  buttonLightTheme,
 } from "./elements.js"
 
 export default function({controls, timer, sound}) {
@@ -91,4 +93,15 @@ export default function({controls, timer, sound}) {
     sound.fireplace()
   }
   })
+
+  buttonDarkTheme.addEventListener('click', function() {
+    controls.themeChange()
+    sound.pressButton()
+  })
+
+  buttonLightTheme.addEventListener('click', function() {
+    controls.themeChange()
+    sound.pressButton()
+  })
+
 }
