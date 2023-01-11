@@ -10,6 +10,7 @@ import {
   minutesDisplay,
   buttonDarkTheme,
   buttonLightTheme,
+  volumeForest
 } from "./elements.js"
 
 export default function({controls, timer, sound}) {
@@ -102,6 +103,10 @@ export default function({controls, timer, sound}) {
   buttonLightTheme.addEventListener('click', function() {
     controls.themeChange()
     sound.pressButton()
+  })
+
+  volumeForest.addEventListener('change', function() {
+    sound.forestSound.volume = volumeForest.value
   })
 
 }

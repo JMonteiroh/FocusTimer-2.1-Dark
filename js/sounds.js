@@ -19,10 +19,6 @@ export default function() {
     fireplaceSound.pause()
   }
 
-  function forestPause() {
-    forestSound.pause()
-  }
-
   function rain() {
     rainSound.play()
     forestSound.pause()
@@ -51,6 +47,7 @@ export default function() {
   function timeEnd() {
     kitchenTimer.play()
   }
+
   return {
     pressButton,
     timeEnd,
