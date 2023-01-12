@@ -10,7 +10,10 @@ import {
   minutesDisplay,
   buttonDarkTheme,
   buttonLightTheme,
-  volumeForest
+  volumeForest,
+  volumeCoffee,
+  volumeFireplace,
+  volumeRain
 } from "./elements.js"
 
 export default function({controls, timer, sound}) {
@@ -48,51 +51,67 @@ export default function({controls, timer, sound}) {
   })
 
   buttonForest.addEventListener('click', function() {
-    if(buttonForest.classList.contains('hide')) {
-      buttonForest.classList.remove('hide')
-      sound.pressButton()
-      sound.forestSound.pause()
-    }else{
-      controls.forest()
-      sound.pressButton()
-      sound.forest()
-    }
+    controls.forest()
+    sound.pressButton()
+    sound.forest() 
+
+    // if(buttonForest.classList.contains('hide')) {
+    //   buttonForest.classList.remove('hide')
+    //   sound.pressButton()
+    //   sound.forestSound.pause()
+    // }else{
+  //   controls.forest()
+    //   sound.pressButton()
+    //   sound.forest()  
+    // }
   })
 
   buttonRain.addEventListener('click', function() {
-    if(buttonRain.classList.contains('hide')) {
-      buttonRain.classList.remove('hide')
-      sound.pressButton()
-      sound.rainSound.pause()
-    }else{
-      controls.rain()
-      sound.pressButton()
-      sound.rain()
-    }
+    controls.rain()
+    sound.pressButton()
+    sound.rain()
+    
+    // if(buttonRain.classList.contains('hide')) {
+    //   buttonRain.classList.remove('hide')
+    //   sound.pressButton()
+    //   sound.rainSound.pause()
+    // }else{
+    //   controls.rain()
+    //   sound.pressButton()
+    //   sound.rain()
+    // }
   })
   
   buttonCoffee.addEventListener('click', function() {
-    if(buttonCoffee.classList.contains('hide')) {
-      buttonCoffee.classList.remove('hide')
-      sound.pressButton()
-      sound.coffeeSound.pause()
-    }else {
-      controls.coffee()
-      sound.pressButton()
-      sound.coffee()
-    }
+    controls.coffee()
+    sound.pressButton()
+    sound.coffee()
+    
+    // if(buttonCoffee.classList.contains('hide')) {
+    //   buttonCoffee.classList.remove('hide')
+    //   sound.pressButton()
+    //   sound.coffeeSound.pause()
+    // }else {
+    //   controls.coffee()
+    //   sound.pressButton()
+    //   sound.coffee()
+    // }
   })
 
   buttonFireplace.addEventListener('click', function() {
-  if(buttonFireplace.classList.contains('hide')) {
-    buttonFireplace.classList.remove('hide')
-    sound.pressButton()
-    sound.fireplaceSound.pause()
-  }else {
     controls.fireplace()
     sound.pressButton()
     sound.fireplace()
-  }
+
+//  if(buttonFireplace.classList.contains('hide')) {
+//     buttonFireplace.classList.remove('hide')
+//     sound.pressButton()
+//     sound.fireplaceSound.pause()
+//   }else {
+//     controls.fireplace()
+//     sound.pressButton()
+//     sound.fireplace()
+//   } 
   })
 
   buttonDarkTheme.addEventListener('click', function() {
@@ -107,6 +126,18 @@ export default function({controls, timer, sound}) {
 
   volumeForest.addEventListener('change', function() {
     sound.forestSound.volume = volumeForest.value
+  })
+
+  volumeCoffee.addEventListener('change', () => {
+    sound.coffeeSound.volume = volumeCoffee.value
+  })
+
+  volumeRain.addEventListener('change', () => {
+    sound.rainSound.volume = volumeRain.value
+  })
+
+  volumeFireplace.addEventListener('change', () => {
+    sound.fireplaceSound.volume = volumeFireplace.value
   })
 
 }

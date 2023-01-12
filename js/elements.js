@@ -16,6 +16,9 @@ const buttonDarkTheme = document.querySelector('.dark')
 const buttonLightTheme = document.querySelector('.light')
 
 const volumeForest = document.querySelector('#forest-volume')
+const volumeRain = document.querySelector('#rain-volume')
+const volumeCoffee = document.querySelector('#coffee-volume')
+const volumeFireplace = document.querySelector('#fireplace-volume')
 
 
 export {
@@ -31,5 +34,8 @@ export {
   secondsDisplay,
   buttonDarkTheme,
   buttonLightTheme,
-  volumeForest
+  volumeForest,
+  volumeCoffee,
+  volumeFireplace,
+  volumeRain
 }

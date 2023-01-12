@@ -6,7 +6,8 @@ export default function() {
   const buttonPressAudio = new Audio("./sounds/audios_button-press.wav")
   const kitchenTimer = new Audio("./sounds/audios_kichen-timer.mp3")
 
-  
+  buttonPressAudio.volume = 0.25
+  kitchenTimer.volume = 0.5
   forestSound.loop = true
   rainSound.loop = true
   coffeeSound.loop = true

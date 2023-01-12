@@ -15,7 +15,10 @@ import {
   secondsDisplay,
   buttonDarkTheme,
   buttonLightTheme,
-  volumeForest
+  volumeForest,
+  volumeCoffee,
+  volumeFireplace,
+  volumeRain
 } from "./elements.js";
 
 const controls = Controls({
